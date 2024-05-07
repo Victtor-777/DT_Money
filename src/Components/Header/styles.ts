@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as Dialog from "@radix-ui/react-dialog";
 
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme["gray-900"]};
@@ -30,4 +31,15 @@ export const NewTransactionButton = styled.button`
   &:hover {
     background: ${(props) => props.theme["green-700"]};
   }
+`;
+
+export const CloseButton = styled(Dialog.Close)`
+  position: absolute;
+  background: transparent;
+  color: ${(props) => props.theme["gray-500"]};
+  border: 0;
+  top: 1.5rem;
+  right: 1.5rem;
+  line-height: 0;
+  cursor: pointer;
 `;
